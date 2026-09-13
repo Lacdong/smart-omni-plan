@@ -1,0 +1,338 @@
+/* Liquid Glass Storefront Header & Footer CSS System */
+
+.glass-storefront-layout {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #F8FAFC;
+  color: #0F172A;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Atmospheric Ambient Soft Glow Spheres (Light Tone) */
+.glass-ambient-glow-1 {
+  position: fixed;
+  top: -160px;
+  left: 12%;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, rgba(79, 70, 229, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+}
+
+.glass-ambient-glow-2 {
+  position: fixed;
+  bottom: -200px;
+  right: 8%;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(124, 58, 237, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(70px);
+}
+
+/* Liquid Glass Header Container */
+.storefront-glass-header {
+  position: sticky;
+  top: 16px;
+  z-index: 50;
+  margin: 16px 24px 0 24px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    inset 0 -1px 2px rgba(15, 23, 42, 0.03),
+    0 12px 36px rgba(15, 23, 42, 0.06),
+    0 4px 12px rgba(99, 102, 241, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Top Specular Liquid Sheen Overlay */
+.storefront-glass-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(255, 255, 255, 0.15) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.storefront-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #0F172A;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.storefront-logo-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #6366F1 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.storefront-store-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(241, 245, 249, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  padding: 6px 14px;
+  border-radius: 14px;
+  color: #0F172A;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.storefront-store-dropdown:hover, .storefront-store-dropdown:focus {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.storefront-search-form {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.storefront-search-input {
+  width: 100%;
+  padding: 9px 16px 9px 40px;
+  background: rgba(241, 245, 249, 0.75);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  border-radius: 16px;
+  font-size: 13px;
+  color: #0F172A;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.storefront-search-input::placeholder {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.storefront-search-input:focus {
+  background: #FFFFFF;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.storefront-search-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748B;
+  pointer-events: none;
+}
+
+.storefront-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.storefront-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.storefront-nav-link:hover {
+  color: #4F46E5;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.storefront-nav-link.active {
+  color: #4F46E5;
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.storefront-btn-trial {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
+}
+
+.storefront-btn-trial:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+  background: linear-gradient(135deg, #4338CA 0%, #4F46E5 100%);
+}
+
+/* Liquid Glass Footer Container */
+.storefront-glass-footer {
+  position: relative;
+  z-index: 10;
+  margin: 40px 24px 24px 24px;
+  padding: 36px 36px 24px 36px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    0 16px 40px rgba(15, 23, 42, 0.06);
+}
+
+.storefront-footer-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1.4fr 1.4fr;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+@media (max-width: 900px) {
+  .storefront-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .storefront-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.storefront-footer-col-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.storefront-footer-text {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+.storefront-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.storefront-footer-links a {
+  font-size: 13px;
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.storefront-footer-links a:hover {
+  color: #4F46E5;
+}
+
+.marketplace-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  color: #1E293B;
+  margin-bottom: 8px;
+}
+
+.marketplace-badge-pill.shopee {
+  border-color: rgba(238, 77, 45, 0.3);
+  background: rgba(254, 242, 242, 0.9);
+  color: #EE4D2D;
+}
+
+.marketplace-badge-pill.tiktok {
+  border-color: rgba(15, 23, 42, 0.2);
+  background: rgba(248, 250, 252, 0.95);
+  color: #0F172A;
+}
+
+.marketplace-badge-pill.lazada {
+  border-color: rgba(15, 20, 110, 0.2);
+  background: rgba(238, 242, 255, 0.9);
+  color: #0F146E;
+}
+
+.storefront-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #64748B;
+}
+
+.security-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(220, 252, 231, 0.8);
+  border: 1px solid rgba(134, 239, 172, 0.8);
+  color: #15803D;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 11px;
+}

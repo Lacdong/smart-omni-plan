@@ -1,0 +1,105 @@
+.cta-section {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.cta-container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.cta-gradient-box {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #6366F1 100%);
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 30px -10px rgba(99, 102, 241, 0.3);
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.cta-title {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  max-width: 44rem;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 36rem;
+  margin-bottom: 2.25rem;
+}
+
+.cta-action-wrap {
+  margin-bottom: 2.5rem;
+}
+
+.btn-cta-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #4F46E5;
+  background-color: #FFFFFF;
+  padding: 0.875rem 2.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cta-white:hover {
+  background-color: #F8FAFC;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cta-highlights-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 640px) {
+  .cta-highlights-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .cta-title {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,32 @@
+/* SCR-61 AI Forecast Detail & Chart Page Styles */
+
+.forecast-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prophet-equation-box {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 27, 75, 0.95) 100%);
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  color: white;
+}
+
+.component-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
+}
+
+.forecast-svg-chart {
+  width: 100%;
+  height: 280px;
+  background: #F8FAFC;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  padding: 1rem;
+}

@@ -1,0 +1,135 @@
+/* Global Light Glass Tone Design System (Apple Liquid Glass Architecture) */
+
+.glass-app-layout {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #F8FAFC;
+  color: #0F172A;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Vivid Atmospheric Ambient Soft Glow Spheres */
+.glass-ambient-glow-1 {
+  position: fixed;
+  top: -120px;
+  left: 10%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.24) 0%, rgba(79, 70, 229, 0.05) 60%, rgba(79, 70, 229, 0) 75%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(70px);
+}
+
+.glass-ambient-glow-2 {
+  position: fixed;
+  bottom: -150px;
+  right: 8%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.22) 0%, rgba(124, 58, 237, 0.04) 60%, rgba(124, 58, 237, 0) 75%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+/* Apple Liquid Glass Universal Container Class */
+.liquid-glass-container,
+.liquid-glass-panel {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.38) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    inset 0 0 12px rgba(255, 255, 255, 0.3),
+    0 12px 36px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Top Specular Glare Sheen Reflection Overlay */
+.liquid-glass-container::before,
+.liquid-glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.35) 40%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  pointer-events: none;
+}
+
+.liquid-glass-container:hover,
+.liquid-glass-panel:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.55) 100%);
+  border-color: #FFFFFF;
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 1),
+    0 22px 50px rgba(79, 70, 229, 0.12);
+}
+
+/* Universal Liquid Glass Input Class */
+.liquid-glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  border-radius: 16px;
+  color: #0F172A;
+  transition: all 0.25s ease;
+}
+
+.liquid-glass-input:focus {
+  background: #FFFFFF;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18), 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* Glass Table Container (Light Tone) */
+.liquid-glass-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.liquid-glass-table th {
+  background: rgba(241, 245, 249, 0.8);
+  color: #475569;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.liquid-glass-table td {
+  padding: 14px 16px;
+  color: #0F172A;
+  border-bottom: 1px solid rgba(241, 245, 249, 0.9);
+  font-size: 13px;
+}
+
+.liquid-glass-table tr:last-child td {
+  border-bottom: none;
+}
+
+.liquid-glass-table tr:hover td {
+  background: rgba(248, 250, 252, 0.9);
+}

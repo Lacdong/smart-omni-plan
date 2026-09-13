@@ -1,0 +1,86 @@
+/* SCR-41 Inventory Adjustment Modal Styles */
+
+.inventory-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .inventory-modal-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.sku-info-card {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.stock-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #E2E8F0;
+}
+
+.stock-pill-val {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.stock-pill-lbl {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.concurrency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4F46E5;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.sync-simulation-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s ease;
+}
+
+.sync-simulation-step.active {
+  background: #EEF2FF;
+  border-color: #6366F1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.12);
+}
+
+.sync-simulation-step.completed {
+  background: #F0FDF4;
+  border-color: #22C55E;
+}
+
+.sync-simulation-step.error {
+  background: #FEF2F2;
+  border-color: #EF4444;
+}

@@ -1,0 +1,235 @@
+/* Onboarding Channel Configuration Glass Styles */
+
+.onboarding-channel-wrapper {
+  width: 100%;
+  max-width: 760px;
+  box-sizing: border-box;
+}
+
+.onboarding-channel-card {
+  position: relative;
+  width: 100%;
+  padding: 36px 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  box-shadow: 
+    inset 0 0 2px rgba(255, 255, 255, 0.8),
+    inset 0 0 12px rgba(255, 255, 255, 0.15),
+    0 20px 60px rgba(15, 23, 42, 0.15);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.onboarding-channel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.06) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 24px 24px 0 0;
+  pointer-events: none;
+}
+
+/* Channel Tabs Header */
+.channel-tabs-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 24px 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.channel-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.20);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.channel-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.channel-tab-btn.active {
+  background: rgba(255, 255, 255, 0.50);
+  border-color: #6366F1;
+  color: #0F172A;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.channel-tab-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #64748B;
+}
+
+.channel-tab-btn.active .channel-tab-badge.verified {
+  background: rgba(16, 185, 129, 0.2);
+  color: #059669;
+}
+
+/* Channel Form Card */
+.channel-config-box {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.channel-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-box-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.channel-logo-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Webhook URL Box */
+.webhook-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.webhook-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.webhook-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.webhook-url-code {
+  flex: 1;
+  font-family: monospace;
+  font-size: 12px;
+  color: #0F172A;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.webhook-copy-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #0F172A;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.webhook-copy-btn:hover {
+  background: #1E293B;
+}
+
+/* Test Connection Button */
+.btn-test-connection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.35);
+  color: #4F46E5;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-test-connection:hover {
+  background: rgba(79, 70, 229, 0.25);
+  border-color: rgba(79, 70, 229, 0.5);
+  transform: translateY(-1px);
+}
+
+.test-status-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #047857;
+  font-size: 12px;
+  font-weight: 700;
+}

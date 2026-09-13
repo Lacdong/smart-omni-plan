@@ -1,0 +1,171 @@
+/* Header Wrapper - Clean Container for floating nav */
+.landing-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  background: transparent;
+}
+
+.landing-header-container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.landing-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+}
+
+.brand-icon-box {
+  width: 2.125rem;
+  height: 2.125rem;
+  background-color: #0F172A;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.025em;
+}
+
+/* =========================================================
+   CENTER NAV PILL - LIQUID GLASS (USER SVG DISTORTION SPEC)
+   ========================================================= */
+
+.landing-nav-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+  padding: 0.5625rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 
+    0px 0px 21px -8px rgba(255, 255, 255, 0.4),
+    0 10px 30px -5px rgba(31, 38, 135, 0.06);
+  isolation: isolate;
+  transition: all 0.3s ease;
+}
+
+/* Tint and inner shadow layer */
+.landing-nav-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 5px -8px rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Backdrop blur and SVG distortion layer */
+.landing-nav-pill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
+  isolation: isolate;
+  pointer-events: none;
+}
+
+.landing-nav-pill:hover {
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    0px 0px 25px -4px rgba(255, 255, 255, 0.5),
+    0 12px 36px -6px rgba(79, 70, 229, 0.12);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-link {
+  position: relative;
+  z-index: 10;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1E293B;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.nav-link:hover {
+  color: #4F46E5;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Right Actions */
+.landing-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-sign-in {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1E293B;
+  text-decoration: none;
+  padding: 0.5rem 0.875rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.btn-sign-in:hover {
+  color: #4F46E5;
+}
+
+.btn-free-trial {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #0F172A;
+  padding: 0.5625rem 1.375rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-free-trial:hover {
+  background-color: #1E293B;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .landing-nav-pill {
+    display: none;
+  }
+}

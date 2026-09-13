@@ -1,0 +1,111 @@
+/* Thermal Shipping Label PDF Modal (SCR-32) Light Glass Styles */
+
+.shipping-label-pdf-preview {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 2px dashed #CBD5E1;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  font-family: 'Inter', monospace, sans-serif;
+  color: #0F172A;
+}
+
+.pdf-label-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0F172A;
+}
+
+.pdf-carrier-logo {
+  font-size: 16px;
+  font-weight: 900;
+  color: #EE4D2D;
+}
+
+.pdf-barcode-box {
+  padding: 14px 0;
+  text-align: center;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.pdf-barcode-lines {
+  height: 48px;
+  background: repeating-linear-gradient(
+    90deg,
+    #0F172A,
+    #0F172A 3px,
+    #FFFFFF 3px,
+    #FFFFFF 6px,
+    #0F172A 6px,
+    #0F172A 8px,
+    #FFFFFF 8px,
+    #FFFFFF 12px
+  );
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+.pdf-tracking-val {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.pdf-addresses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 11px;
+}
+
+.pdf-address-title {
+  font-weight: 800;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.pdf-items-summary {
+  padding: 12px 0;
+  font-size: 11px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.pdf-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-print-thermal {
+  flex: 1;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-print-thermal:hover {
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}

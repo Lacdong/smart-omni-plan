@@ -1,0 +1,311 @@
+/* Onboarding Register Page Glass Styles */
+
+.onboarding-card-wrapper {
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.onboarding-card-wrapper.business-wide {
+  max-width: 720px;
+}
+
+.onboarding-glass-card {
+  position: relative;
+  width: 100%;
+  padding: 36px 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  box-shadow: 
+    inset 0 0 2px rgba(255, 255, 255, 0.8),
+    inset 0 0 12px rgba(255, 255, 255, 0.15),
+    0 20px 60px rgba(15, 23, 42, 0.15);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.onboarding-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.06) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 24px 24px 0 0;
+  pointer-events: none;
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.onboarding-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  font-size: 11px;
+  font-weight: 700;
+  color: #4F46E5;
+  margin-bottom: 10px;
+}
+
+.onboarding-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.01em;
+}
+
+.onboarding-subtitle {
+  font-size: 13px;
+  color: #475569;
+  margin: 0;
+}
+
+/* Account Type Selector Tabs */
+.account-type-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.account-type-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.account-type-tab.active {
+  background: #FFFFFF;
+  color: #4F46E5;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.tab-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-title {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tab-desc {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+/* Form Styles */
+.onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* 2-Column Horizontal Grid for Business Registration ("chia đều form ngang") */
+.onboarding-form.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  align-items: start;
+}
+
+.grid-col-left,
+.grid-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-full-width {
+  grid-column: 1 / -1;
+}
+
+.business-info-pill-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  margin-top: 4px;
+}
+
+.onboarding-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.onboarding-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.onboarding-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.onboarding-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748B;
+  pointer-events: none;
+  width: 18px;
+  height: 18px;
+}
+
+.onboarding-input {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px 0 42px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  border-radius: 12px;
+  font-size: 13px;
+  color: #0F172A;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.onboarding-input:focus {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(99, 102, 241, 0.8);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.onboarding-url-preview {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #4F46E5;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.onboarding-password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.onboarding-password-toggle:hover {
+  color: #0F172A;
+}
+
+.register-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  color: #E11D48;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.onboarding-btn-submit {
+  width: 100%;
+  height: 46px;
+  background: #0F172A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  margin-top: 6px;
+}
+
+.onboarding-btn-submit:hover {
+  background: #1E293B;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.24);
+}
+
+.onboarding-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #475569;
+}
+
+.onboarding-link {
+  color: #4F46E5;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.onboarding-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Overrides */
+@media (max-width: 640px) {
+  .onboarding-form.form-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .onboarding-card-wrapper.business-wide {
+    max-width: 100%;
+  }
+
+  .onboarding-glass-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+}

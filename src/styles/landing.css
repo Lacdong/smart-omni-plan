@@ -1,0 +1,107 @@
+/* Dedicated Landing Page Stylesheet (SCR-00 Visual System) */
+
+/* Atmospheric Ambient Glow Backgrounds */
+.landing-ambient-glow-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 380px;
+  background: radial-gradient(ellipse at top, rgba(199, 210, 254, 0.5) 0%, rgba(233, 213, 255, 0.3) 45%, transparent 70%);
+  filter: blur(48px);
+  pointer-events: none;
+  z-index: -10;
+}
+
+.landing-ambient-glow-secondary {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 140px;
+  background: linear-gradient(90deg, rgba(191, 219, 254, 0.4), rgba(199, 210, 254, 0.5), rgba(251, 207, 232, 0.4));
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: -10;
+}
+
+/* Liquid Glass Elements */
+.glass-header-pill {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 4px 20px -2px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-in-out;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(203, 213, 225, 1);
+}
+
+.glass-integrations-pill {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 8px 24px -4px rgba(99, 102, 241, 0.08),
+    0 2px 6px -1px rgba(0, 0, 0, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
+}
+
+/* Solid White Clean Cards */
+.solid-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.solid-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+  border-color: rgba(203, 213, 225, 0.9);
+}
+
+/* Enterprise Pro Card Accent */
+.pricing-pro-card {
+  background: #FFFFFF;
+  border: 2px solid rgba(99, 102, 241, 0.85);
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px -4px rgba(99, 102, 241, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+/* AI Section Container */
+.ai-section-box {
+  background: rgba(243, 241, 253, 0.65);
+  border: 1px solid rgba(221, 214, 254, 0.7);
+  border-radius: 1.75rem;
+}
+
+/* Gradient CTA Banner */
+.cta-gradient-box {
+  background: linear-gradient(135deg, #4F46E5 0%, #4338CA 50%, #6D28D9 100%);
+  border-radius: 1.75rem;
+  box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.3);
+}
+
+/* Landing Page Footer */
+.landing-footer {
+  background: rgba(248, 248, 253, 0.9);
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+}

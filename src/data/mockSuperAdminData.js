@@ -1,0 +1,118 @@
+/* Mock Dataset for Flow 7: Super Admin Operations (SCR-70, SCR-71, SCR-72, SCR-73) */
+
+export const INITIAL_TENANTS = [
+  {
+    tenantId: 't-hxvf123',
+    companyName: 'Hxvf123 Fashion & Tech Store',
+    subdomain: 'hxvf123.smartomni.vn',
+    adminEmail: 'admin@hxvf123.vn',
+    planTier: 'PRO',
+    status: 'ACTIVE', // ACTIVE | LOCKED
+    skusUsed: 850,
+    skuLimit: 'UNLIMITED',
+    channelsConnected: 3,
+    maxChannels: 10,
+    jwtRevokedAt: null,
+    nginxBlocked: false,
+    lastActive: '2026-09-13 12:45',
+    createdAt: '2026-06-15',
+  },
+  {
+    tenantId: 't-anhtuan',
+    companyName: 'Anh Tuấn Auto Parts',
+    subdomain: 'anhtuan-autoparts.smartomni.vn',
+    adminEmail: 'contact@anhtuanauto.vn',
+    planTier: 'FREE',
+    status: 'ACTIVE',
+    skusUsed: 45,
+    skuLimit: 50,
+    channelsConnected: 1,
+    maxChannels: 1,
+    jwtRevokedAt: null,
+    nginxBlocked: false,
+    lastActive: '2026-09-13 11:30',
+    createdAt: '2026-08-01',
+  },
+  {
+    tenantId: 't-minhkhang',
+    companyName: 'Minh Khang Electronics',
+    subdomain: 'minhkhang.smartomni.vn',
+    adminEmail: 'support@minhkhang.vn',
+    planTier: 'PRO',
+    status: 'LOCKED',
+    lockReason: 'Phát hiện vi phạm chính sách thanh toán / Spammed API Rate Limit',
+    skusUsed: 1200,
+    skuLimit: 'UNLIMITED',
+    channelsConnected: 5,
+    maxChannels: 10,
+    jwtRevokedAt: '2026-09-12 18:00:00',
+    nginxBlocked: true,
+    lastActive: '2026-09-12 17:58',
+    createdAt: '2026-05-10',
+  },
+  {
+    tenantId: 't-beautycare',
+    companyName: 'BeautyCare VN Official Store',
+    subdomain: 'beautycare.smartomni.vn',
+    adminEmail: 'hello@beautycare.vn',
+    planTier: 'PRO',
+    status: 'ACTIVE',
+    skusUsed: 410,
+    skuLimit: 'UNLIMITED',
+    channelsConnected: 2,
+    maxChannels: 10,
+    jwtRevokedAt: null,
+    nginxBlocked: false,
+    lastActive: '2026-09-13 10:15',
+    createdAt: '2026-07-20',
+  },
+]
+
+export const INITIAL_PRICING_CONFIG = {
+  FREE: {
+    name: 'Gói Free (Miễn phí)',
+    maxSkus: 50,
+    maxChannels: 1,
+    aiProphetEnabled: false,
+    webhookPriority: 'LOW',
+    rateLimitRps: 10,
+    monthlyPriceVnd: 0,
+  },
+  PRO: {
+    name: 'Gói Pro Tier (Chuyên nghiệp)',
+    maxSkus: 'UNLIMITED',
+    maxChannels: 10,
+    aiProphetEnabled: true,
+    webhookPriority: 'HIGH',
+    rateLimitRps: 100,
+    monthlyPriceVnd: 1990000,
+  },
+}
+
+export const INITIAL_FEATURE_FLAGS = [
+  { id: 'FLAG_PROPHET_AI', name: 'Mô hình AI Prophet Demand Forecasting', enabled: true, description: 'Cho phép Tenant Pro sử dụng dự báo nhu cầu kho' },
+  { id: 'FLAG_OUTBOX_WORKER_V2', name: 'High-Throughput Outbox Publisher V2', enabled: true, description: 'Chạy tiến trình Outbox đa luồng trên Redis Queue' },
+  { id: 'FLAG_STRICT_RLS_AUDIT', name: 'Strict PostgreSQL RLS Isolation Enforcement', enabled: true, description: 'Tự động block 403 nếu phát hiện truy vấn sai tenant_id' },
+]
+
+export const INITIAL_APM_SECURITY_LOGS = [
+  {
+    id: 'SEC-RLS-001',
+    timestamp: '2026-09-13 12:30:15',
+    eventType: 'RLS_ISOLATION_ENFORCED',
+    status: 'BLOCKED_403',
+    tenantId: 't-anhtuan',
+    details: 'PostgreSQL RLS Policy `tenant_isolation_policy` đã chặn truy vấn tới schema của `t-hxvf123`.',
+    querySnippet: "SELECT * FROM orders WHERE tenant_id = 't-hxvf123' AND order_id = 'ORD-8891'",
+    clientIp: '113.161.44.12',
+  },
+  {
+    id: 'APM-LATENCY-99',
+    timestamp: '2026-09-13 12:15:00',
+    eventType: 'SYSTEM_PERFORMANCE',
+    status: 'HEALTHY',
+    tenantId: 'SYSTEM',
+    details: 'APM Latency p95: 110ms | Webhook Ingestion: 420 req/s | RabbitMQ Queue Depth: 0 msgs',
+    rmseAiScore: 0.042,
+  },
+]

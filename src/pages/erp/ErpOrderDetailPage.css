@@ -1,0 +1,88 @@
+/* ERP Order Detail Page (SCR-31) Liquid Glass System */
+
+.erp-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.erp-detail-header-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.erp-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.erp-card-glass {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.erp-card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.outbox-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px dashed #E2E8F0;
+}
+
+.outbox-timeline-item {
+  position: relative;
+}
+
+.outbox-timeline-dot {
+  position: absolute;
+  left: -27px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0F172A;
+  border: 2px solid #FFFFFF;
+}
+
+.outbox-timeline-dot.success {
+  background: #10B981;
+}
+
+.outbox-timeline-dot.failed {
+  background: #EF4444;
+}
+
+.outbox-timeline-dot.warning {
+  background: #F59E0B;
+}
+
+@media (max-width: 960px) {
+  .erp-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
